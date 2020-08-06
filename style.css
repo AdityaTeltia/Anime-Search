@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    background-image:linear-gradient(90deg,pink,blue);
+}
+
+#heading{
+    font-size:100px;
+    margin-bottom: 10px;
+    text-shadow:
+        3px 3px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+       -1px 1px 0 #000,
+        1px 1px 0 #000;
+    animation: colorchange 2s infinite alternate;
+}
+
+#search-input{
+    width: 80%;
+    height: 30px;
+    outline: 0;
+}
+
+.container {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+}
+
+
+ul{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style-type: none;
+}
+
+img{
+    height:200px;
+    width:200px;
+    border-bottom-left-radius:50%;
+    border-bottom-right-radius:50%;
+
+}
+
+
+.card {  
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 200px;
+    height: 300px;
+    margin-bottom:20px !important;
+    margin: 0 20px; 
+    perspective: 1000px;
+    background-color: transparent;
+    transition: transform 2s;
+      
+}
+  
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);  
+}
+.fa{
+    position: absolute;
+    bottom: 2%;
+    cursor: pointer;
+    color: white;
+}
+
+
+
+
+a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+a:hover {
+    color: red;
+}
+
+.episodes {
+    color: white;
+    font-size: 14px;
+    padding: 2px;
+}
+
+@keyframes colorchange {
+    0% {
+      color:  red;
+    }
+    100% {
+      color:  green;
+    }
+}
+
+@media (max-width:768px){
+    ul{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .card,img{
+        width: 400px;
+    }
+}
+
