@@ -1,6 +1,8 @@
 
 document.getElementById('search-input').addEventListener('keyup', search);
-
+document.getElementById('search-form').addEventListener('submit',(e)=>{
+    e.preventDefault();
+})
 clearOutput();
 
 async function search(e){
@@ -31,7 +33,7 @@ async function search(e){
         </li>
     `
     })
-    e.preventDefault();
+    
 }
 
 
