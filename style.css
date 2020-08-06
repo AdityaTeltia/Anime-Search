@@ -40,6 +40,7 @@ body{
 ul{
     margin-top: 20px;
     display: grid;
+    gap: 40px;
     grid-template-columns: 1fr 1fr 1fr;
     list-style-type: none;
 }
@@ -114,5 +115,14 @@ a:hover {
     .card,img{
         width: 400px;
     }
+    .card{
+        margin-bottom: 20px;
+    }
+}
+@media (max-width:640px){
+    .card,img{
+        width: 200px;
+    }
+
 }
 
